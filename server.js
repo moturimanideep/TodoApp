@@ -1,8 +1,11 @@
 var express = require('express');
 var mongoose = require('mongoose');
+var cors = require('cors');
+
 var bodyParser = require('body-parser');
 var mongo = require('mongodb');
 var app = express();
+app.use(cors());
 const todo = require('./src/routers/routers');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
